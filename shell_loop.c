@@ -1,4 +1,4 @@
-0#include "shell.h"
+#include "shell.h"
 
 /**
  * hsh - main shell loop
@@ -68,10 +68,10 @@ int find_builtin(info_t *info)
 	};
 
 	for (k = 0; builtintbl[k].type; k++)
-		if (_strcmp(info->argv[0], builtintbl[i].type) == 0)
+		if (_strcmp(info->argv[0], builtintbl[k].type) == 0)
 		{
 			info->line_count++;
-			built_in_ret = builtintbl[i].func(info);
+			built_in_ret = builtintbl[k].func(info);
 			break;
 		}
 	return (built_in_ret);

@@ -40,9 +40,9 @@ char **strtow(char *str, char *d)
 			free(s);
 			return (NULL);
 		}
-		for (m = 0; m < e; m++)
-			s[c][m] = str[b++];
-		s[c][m] = 0;
+		for (n = 0; n < e; n++)
+			s[c][n] = str[b++];
+		s[c][n] = 0;
 	}
 	s[c] = NULL;
 	return (s);

@@ -105,7 +105,7 @@ char *convert_number(long int num, int base, int flags)
 
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
-		m = -num;
+		n = -num;
 		sign = '-';
 
 	}
@@ -113,15 +113,17 @@ char *convert_number(long int num, int base, int flags)
 	ptr = &buffer[49];
 	*ptr = '\0';
 
-	do { *--ptr = array[n % base];
-		m /= base;
+	do {
+		*--ptr = array[n % base];
+		n /= base;
 	}
 	while {
-		(m != 0);
+		(n != 0);
 	}
 
 	if (sign)
 		*--ptr = sign;
+
 	return (ptr);
 }
 
