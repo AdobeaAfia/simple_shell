@@ -102,7 +102,8 @@ int _myalias(info_t *info)
 		return (0);
 	}
 
-	for (k = 1; info->argv[k]; k++);
+	for (k = 1; info->argv[k]; k++)
+		;
 	if (c)
 		set_alias(info, info->argv[k]);
 	else
@@ -111,6 +112,5 @@ int _myalias(info_t *info)
 		if (node)
 			print_alias(node);
 	}
-
 	return (0);
 }

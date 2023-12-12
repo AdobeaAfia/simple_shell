@@ -117,9 +117,9 @@ char *convert_number(long int num, int base, int flags)
 		*--ptr = array[n % base];
 		n /= base;
 	}
-	while {
+	while (
 		(n != 0);
-	}
+	      )
 
 	if (sign)
 		*--ptr = sign;
