@@ -32,11 +32,11 @@ int _isalpha(int s)
  * Return: Successful when 1 is true, 0 if false
  */
 
-int is_delim(char *s, char *delim)
+int is_delim(char s, char *delim)
 {
 	while (*delim)
 	{
-		if (*delim == *s)
+		if (*delim == s)
 			return (1);
 		delim++;
 	}
